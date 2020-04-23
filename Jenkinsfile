@@ -7,6 +7,10 @@ node{
       sh "${mvnHome}/bin/mvn package"
 }
    stage('stack notifcation'){
-     slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'ajayrock', color: 'good', message: 'i can see the deploy in good conduction no issue are present', tokenCredentialId: 'the jenkins work', username: 'ajaygurugubilli9@gmail.com'
+     slackSend baseUrl: 'https://hooks.slack.com/services/', 
+        channel: 'ajayrock', color: 'good', message: 
+        'i can see the deploy in good conduction no issue are present', tokenCredentialId: 
+        'the jenkins work', username: 'ajaygurugubilli9@gmail.com'
+}
 }
 }
