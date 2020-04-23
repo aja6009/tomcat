@@ -6,7 +6,7 @@ node{
       def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
       sh "${mvnHome}/bin/mvn package"
 }
-   stage('email notification'){
-      mail bcc: '', body: 'the project deployment has been completed the 99% call the manager to axis the report and send the result', cc: '', from: '', replyTo: '', subject: 'project report', to: 'ajayguru9562@gmail.com'
+   stage('stack notifcation'){
+     slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'ajayrock', color: 'good', message: 'i can see the deploy in good conduction no issue are present', tokenCredentialId: 'the jenkins work', username: 'ajaygurugubilli9@gmail.com'
 }
 }
